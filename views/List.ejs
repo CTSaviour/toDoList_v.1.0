@@ -1,0 +1,40 @@
+<%- include("header") -%>
+
+    <body>
+         
+        <div class="box" id="heading"> 
+        
+            <h1><%= listTitle %></h1> 
+        
+        </div>
+
+        <div class="box">
+
+            <ul>
+                
+                <% for (var i=0; i<newItems.length; i++) { %>
+
+                    <div class="item">
+                        <input type="checkbox">
+                        <p><%= newItems[i] %> </li>
+                    </div>
+
+                <% } %>
+
+            </ul>
+
+            <form class="item" action="/" method="post">
+                
+                <input type="text" name="todo" placeholder="New work" autocomplete="off"/>
+
+                <button type="submit" name="list" value="<%= listTitle %>">+</button>
+
+            </form>
+
+        </div>
+
+            <%# Here, In the above code we run the non-html code(js). This can be possible only by using the scriplet tags to each and every line of the js code %>
+
+    </body>
+
+<%- include("footer") -%>
